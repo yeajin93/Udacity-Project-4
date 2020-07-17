@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>The Aylien API</title>
+    </head>
+
+    <body>
+
+        <header>The Aylien API</header>
+
+        <main>
+            <section>
+                <p>The Aylien API make it easy to aggregate, analyze, and action news content at scale. Enter any valid news URL to analyze the news article!</p>
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <input id="name" type="url" name="input" value="" placeholder="Name">
+                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                </form>
+            <section>
+
+            <section>
+                <h2><strong>Form Results</strong></h2>
+                <div id="results">
+                    <div id="error"></div>
+                    <ul>
+                        <li>
+                            <h3>Article ID:</h3>
+                            <p id="article_id"></p>
+                        <li>
+                            <h3>Article Title:</h3>
+                            <p id="article_title"></p>
+                        </li>
+                        <li>
+                            <h3>Article Summary:</h3>
+                            <p id="article_summary"></p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Aylien API @ 2020.07.16</p>
+        </footer>
+
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/dist/service-worker.js');
+                });
+            }
+           </script>
+
+    </body>
+</html>
